@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raj Controle Financeiro — Sua vida financeira sob controle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cur-ring" id="curRing"></div>
+<div class="cur-dot" id="curDot"></div>
+
+<!-- Scroll Progress -->
+<div id="prog"></div>
+
+<!-- Aurora -->
+<div class="aurora">
+  <div class="orb"></div>
+  <div class="orb"></div>
+  <div class="orb"></div>
+</div>
+<div class="grid-bg"></div>
+
+<nav id="mainNav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">RJ</div>
+    Raj Controle
+  </a>
+  <ul class="nav-links">
+    <li><a href="#funcionalidades">Funcionalidades</a></li>
+    <li><a href="#categorias">Gastos</a></li>
+    <li><a href="#metas">Metas</a></li>
+    <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="https://rajcontrolefinanceiro.lovable.app/login" class="nav-cta" target="_blank" rel="noopener">Entrar</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-badge">
+    <div class="dot-live"></div>
+    Controle total das suas finanças
+  </div>
+  <h1>Chega de não saber<br><span class="grad-text">pra onde vai o dinheiro</span></h1>
+  <p>O Raj Controle reúne todas as suas contas, despesas e metas em um painel simples, visual e inteligente.</p>
+  <div class="hero-actions">
+    <a href="#entrar" class="btn-primary">Criar conta grátis</a>
+    <a href="#funcionalidades" class="btn-ghost">Ver como funciona</a>
+  </div>
+  <div class="stats-strip">
+    <div class="stat-item">
+      <div class="stat-val" style="color:var(--green)">R$ 4.350,00</div>
+      <div class="stat-label">Receita mensal média</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-val" style="color:var(--red)">R$ 3.120,00</div>
+      <div class="stat-label">Despesas controladas</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-val" style="color:var(--text)">R$ 1.230,00</div>
+      <div class="stat-label">Sobra investida</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-val" style="color:var(--gold)">4 contas</div>
+      <div class="stat-label">Gerenciadas</div>
+    </div>
+  </div>
+</div>
+
+<!-- MOCKUP -->
+<div class="mockup-section" id="funcionalidades">
+  <div class="mockup-wrap reveal">
+    <div class="mockup-bar">
+      <div class="dot red"></div>
+      <div class="dot yellow"></div>
+      <div class="dot green-dot"></div>
+    </div>
+    <div class="mockup-body">
+      <div class="mockup-sidebar">
+        <div class="sidebar-brand">
+          <div class="sidebar-badge">RJ</div>
+          Raj Controle
+        </div>
+        <div class="sidebar-label">Menu</div>
+        <div class="sidebar-item active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          Dashboard
+        </div>
+        <div class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          Contas
+        </div>
+        <div class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Cartões
+        </div>
+        <div class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="12" y1="8" x2="12" y2="16"/></svg>
+          Categorias
+        </div>
+        <div class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+          Receitas
+        </div>
+        <div class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/></svg>
+          Despesas
+        </div>
+        <div class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Metas
+        </div>
+        <div class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Relatórios
+        </div>
+      </div>
+      <div class="mockup-main">
+        <div class="dash-header">
+          <div class="dash-title">Dashboard — Junho 2026</div>
+          <div class="dash-btns">
+            <button class="dbtn g">+ Nova Receita</button>
+            <button class="dbtn r">+ Nova Despesa</button>
+          </div>
+        </div>
+        <div class="dash-cards">
+          <div class="dcard"><div class="dcard-label">Receitas do Mês</div><div class="dcard-val g">R$ 4.350,00</div></div>
+          <div class="dcard"><div class="dcard-label">Despesas do Mês</div><div class="dcard-val r">R$ 3.120,45</div></div>
+          <div class="dcard"><div class="dcard-label">Saldo Disponível</div><div class="dcard-val b">R$ 1.229,55</div></div>
+          <div class="dcard"><div class="dcard-label">Despesas Pagas</div><div class="dcard-val g">R$ 2.840,00</div></div>
+          <div class="dcard"><div class="dcard-label">A Pagar</div><div class="dcard-val r">R$ 280,45</div></div>
+          <div class="dcard"><div class="dcard-label">Economia do Mês</div><div class="dcard-val w">R$ 400,00</div></div>
+        </div>
+        <div class="dash-grid">
+          <div class="chart-card">
+            <div class="chart-title">Gastos por Categoria</div>
+            <div class="donut-wrap">
+              <svg width="80" height="80" viewBox="0 0 80 80">
+                <circle cx="40" cy="40" r="32" fill="none" stroke="#162030" stroke-width="14"/>
+                <circle cx="40" cy="40" r="32" fill="none" stroke="#1EC87A" stroke-width="14" stroke-dasharray="64.3 136.7" stroke-dashoffset="0" transform="rotate(-90 40 40)"/>
+                <circle cx="40" cy="40" r="32" fill="none" stroke="#5B8BEF" stroke-width="14" stroke-dasharray="44.2 156.8" stroke-dashoffset="-64.3" transform="rotate(-90 40 40)"/>
+                <circle cx="40" cy="40" r="32" fill="none" stroke="#F0A830" stroke-width="14" stroke-dasharray="34.1 166.9" stroke-dashoffset="-108.5" transform="rotate(-90 40 40)"/>
+                <circle cx="40" cy="40" r="32" fill="none" stroke="#E8813A" stroke-width="14" stroke-dasharray="24.1 176.9" stroke-dashoffset="-142.6" transform="rotate(-90 40 40)"/>
+                <circle cx="40" cy="40" r="32" fill="none" stroke="#6B8299" stroke-width="14" stroke-dasharray="34.1 166.9" stroke-dashoffset="-166.7" transform="rotate(-90 40 40)"/>
+              </svg>
+              <div class="donut-legend">
+                <div class="legend-item"><div class="legend-dot" style="background:#1EC87A"></div>Moradia</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#5B8BEF"></div>Alimentação</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#F0A830"></div>Transporte</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#E8813A"></div>Lazer</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#6B8299"></div>Outros</div>
+              </div>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-title">Saldo por Conta</div>
+            <div class="account-list">
+              <div class="account-row">
+                <div><div class="account-name">Nubank</div><div class="account-sub">Conta corrente</div></div>
+                <div class="account-val" style="color:var(--green)">R$ 742,30</div>
+              </div>
+              <div class="account-row">
+                <div><div class="account-name">Itaú</div><div class="account-sub">Conta corrente</div></div>
+                <div class="account-val" style="color:var(--green)">R$ 318,75</div>
+              </div>
+              <div class="account-row">
+                <div><div class="account-name">Inter</div><div class="account-sub">Conta digital</div></div>
+                <div class="account-val" style="color:var(--green)">R$ 168,50</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section>
+  <div class="section-tag">Funcionalidades</div>
+  <h2 class="section-title">Tudo que você precisa<br>em um só lugar</h2>
+  <p class="section-sub">Do registro diário ao planejamento de longo prazo, o Raj Controle cuida de cada centavo.</p>
+  <div class="features-grid">
+    <div class="feature-card reveal">
+      <div class="feature-icon">📊</div>
+      <div class="feature-title">Painel Completo</div>
+      <p class="feature-desc">Visão clara de receitas, despesas e saldo em tempo real. Tudo que você precisa saber na tela inicial.</p>
+    </div>
+    <div class="feature-card reveal" style="transition-delay:.1s">
+      <div class="feature-icon">🏦</div>
+      <div class="feature-title">Múltiplas Contas</div>
+      <p class="feature-desc">Cadastre todas as suas contas bancárias e carteiras digitais. Saldo consolidado sem precisar abrir cada app.</p>
+    </div>
+    <div class="feature-card reveal" style="transition-delay:.2s">
+      <div class="feature-icon">🏷️</div>
+      <div class="feature-title">Categorias Flexíveis</div>
+      <p class="feature-desc">Organize seus gastos do jeito que faz sentido pra você. Crie, edite e colora categorias personalizadas.</p>
+    </div>
+    <div class="feature-card reveal" style="transition-delay:.3s">
+      <div class="feature-icon">🎯</div>
+      <div class="feature-title">Metas Financeiras</div>
+      <p class="feature-desc">Defina objetivos com prazo e valor. Acompanhe o progresso e descubra exatamente quanto guardar por mês.</p>
+    </div>
+    <div class="feature-card reveal" style="transition-delay:.4s">
+      <div class="feature-icon">⚡</div>
+      <div class="feature-title">Desafios de Economia</div>
+      <p class="feature-desc">Desafios inteligentes e progressivos para te ajudar a guardar dinheiro de forma constante e motivadora.</p>
+    </div>
+    <div class="feature-card reveal" style="transition-delay:.5s">
+      <div class="feature-icon">📈</div>
+      <div class="feature-title">Relatórios Visuais</div>
+      <p class="feature-desc">Gráficos mensais e anuais de receitas, despesas e evolução do saldo. Entenda seus padrões financeiros.</p>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<div class="metrics-section">
+  <div class="metrics-inner">
+    <div class="section-tag">Por que o Raj Controle</div>
+    <h2 class="section-title">Simples de usar,<br>poderoso de verdade</h2>
+    <div class="metrics-grid">
+      <div class="metric-card reveal">
+        <div class="metric-num" data-target="30" data-prefix="+" data-suffix="%">+30%</div>
+        <div class="metric-label">de economia média nos primeiros 3 meses</div>
+      </div>
+      <div class="metric-card reveal" style="transition-delay:.1s">
+        <div class="metric-num" data-target="4" data-suffix=" min">4 min</div>
+        <div class="metric-label">para configurar e já começar a usar</div>
+      </div>
+      <div class="metric-card reveal" style="transition-delay:.2s">
+        <div class="metric-num" data-target="100" data-suffix="%">100%</div>
+        <div class="metric-label">dos dados ficam só com você</div>
+      </div>
+      <div class="metric-card reveal" style="transition-delay:.3s">
+        <div class="metric-num">gratuito</div>
+        <div class="metric-label">sem taxa, sem cartão, sem surpresa</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section id="categorias">
+  <div class="section-tag">Onde vai o dinheiro</div>
+  <h2 class="section-title">Visualize seus gastos<br>por categoria</h2>
+  <p class="section-sub">Exemplo de como um usuário típico distribui suas despesas mensais de R$ 3.120,45.</p>
+  <div class="categories-wrap reveal">
+    <div class="cat-list">
+      <div class="cat-item">
+        <div class="cat-header"><span class="cat-name">Moradia (aluguel + contas)</span><span class="cat-amount" style="color:#1EC87A">R$ 1.050,00</span></div>
+        <div class="cat-bar-bg"><div class="cat-bar-fill" data-w="100%" style="background:#1EC87A"></div></div>
+      </div>
+      <div class="cat-item">
+        <div class="cat-header"><span class="cat-name">Alimentação</span><span class="cat-amount" style="color:#5B8BEF">R$ 680,00</span></div>
+        <div class="cat-bar-bg"><div class="cat-bar-fill" data-w="65%" style="background:#5B8BEF"></div></div>
+      </div>
+      <div class="cat-item">
+        <div class="cat-header"><span class="cat-name">Transporte</span><span class="cat-amount" style="color:#F0A830">R$ 420,00</span></div>
+        <div class="cat-bar-bg"><div class="cat-bar-fill" data-w="40%" style="background:#F0A830"></div></div>
+      </div>
+      <div class="cat-item">
+        <div class="cat-header"><span class="cat-name">Lazer e entretenimento</span><span class="cat-amount" style="color:#E8813A">R$ 310,00</span></div>
+        <div class="cat-bar-bg"><div class="cat-bar-fill" data-w="30%" style="background:#E8813A"></div></div>
+      </div>
+      <div class="cat-item">
+        <div class="cat-header"><span class="cat-name">Saúde e farmácia</span><span class="cat-amount" style="color:#D9506A">R$ 240,45</span></div>
+        <div class="cat-bar-bg"><div class="cat-bar-fill" data-w="23%" style="background:#D9506A"></div></div>
+      </div>
+      <div class="cat-item">
+        <div class="cat-header"><span class="cat-name">Assinaturas digitais</span><span class="cat-amount" style="color:#9B59B6">R$ 220,00</span></div>
+        <div class="cat-bar-bg"><div class="cat-bar-fill" data-w="21%" style="background:#9B59B6"></div></div>
+      </div>
+      <div class="cat-item">
+        <div class="cat-header"><span class="cat-name">Educação e cursos</span><span class="cat-amount" style="color:#3AB5CC">R$ 200,00</span></div>
+        <div class="cat-bar-bg"><div class="cat-bar-fill" data-w="19%" style="background:#3AB5CC"></div></div>
+      </div>
+    </div>
+    <div class="chart-visual">
+      <div class="donut-large">
+        <svg width="280" height="280" viewBox="0 0 280 280">
+          <circle cx="140" cy="140" r="108" fill="none" stroke="#101820" stroke-width="40"/>
+          <circle cx="140" cy="140" r="108" fill="none" stroke="#1EC87A" stroke-width="40" stroke-dasharray="218 461" stroke-dashoffset="0" transform="rotate(-90 140 140)" opacity=".9"/>
+          <circle cx="140" cy="140" r="108" fill="none" stroke="#5B8BEF" stroke-width="40" stroke-dasharray="141 538" stroke-dashoffset="-218" transform="rotate(-90 140 140)" opacity=".9"/>
+          <circle cx="140" cy="140" r="108" fill="none" stroke="#F0A830" stroke-width="40" stroke-dasharray="87 592" stroke-dashoffset="-359" transform="rotate(-90 140 140)" opacity=".9"/>
+          <circle cx="140" cy="140" r="108" fill="none" stroke="#E8813A" stroke-width="40" stroke-dasharray="64 615" stroke-dashoffset="-446" transform="rotate(-90 140 140)" opacity=".9"/>
+          <circle cx="140" cy="140" r="108" fill="none" stroke="#D9506A" stroke-width="40" stroke-dasharray="50 629" stroke-dashoffset="-510" transform="rotate(-90 140 140)" opacity=".9"/>
+          <circle cx="140" cy="140" r="108" fill="none" stroke="#9B59B6" stroke-width="40" stroke-dasharray="119 560" stroke-dashoffset="-560" transform="rotate(-90 140 140)" opacity=".9"/>
+        </svg>
+        <div class="donut-center">
+          <div class="donut-total-label">Total mensal</div>
+          <div class="donut-total">R$ 3.120,45</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METAS -->
+<section id="metas" style="padding-top:2rem">
+  <div class="section-tag">Metas e desafios</div>
+  <h2 class="section-title">Seus objetivos,<br>no seu ritmo</h2>
+  <p class="section-sub">Defina o que quer conquistar, e o Raj Controle te diz exatamente como chegar lá.</p>
+  <div class="goals-grid">
+    <div class="goal-card reveal">
+      <div class="goal-top">
+        <div class="goal-icon">✈️</div>
+        <div class="goal-badge">42% concluído</div>
+      </div>
+      <div class="goal-name">Viagem para a Europa</div>
+      <div class="goal-deadline">Prazo: 31/07/2027 · 8 depósitos mensais</div>
+      <div class="goal-progress-bar">
+        <div class="goal-progress-fill" data-w="42%" style="background:linear-gradient(90deg,#5B8BEF,#1EC87A)"></div>
+      </div>
+      <div class="goal-stats">
+        <div class="goal-stat-item"><div class="goal-stat-label">Guardado</div><div class="goal-stat-val" style="color:var(--green)">R$ 5.040,00</div></div>
+        <div class="goal-stat-item"><div class="goal-stat-label">Falta</div><div class="goal-stat-val" style="color:var(--red)">R$ 6.960,00</div></div>
+        <div class="goal-stat-item"><div class="goal-stat-label">Guardar/mês</div><div class="goal-stat-val" style="color:var(--blue)">R$ 580,00</div></div>
+        <div class="goal-stat-item"><div class="goal-stat-label">Meta</div><div class="goal-stat-val">R$ 12.000,00</div></div>
+      </div>
+    </div>
+    <div class="goal-card reveal" style="transition-delay:.15s">
+      <div class="goal-top">
+        <div class="goal-icon">🏠</div>
+        <div class="goal-badge">18% concluído</div>
+      </div>
+      <div class="goal-name">Reserva de emergência</div>
+      <div class="goal-deadline">Prazo: 30/12/2026 · 6 depósitos mensais</div>
+      <div class="goal-progress-bar">
+        <div class="goal-progress-fill" data-w="18%" style="background:linear-gradient(90deg,#E8813A,#F0A830)"></div>
+      </div>
+      <div class="goal-stats">
+        <div class="goal-stat-item"><div class="goal-stat-label">Guardado</div><div class="goal-stat-val" style="color:var(--green)">R$ 1.800,00</div></div>
+        <div class="goal-stat-item"><div class="goal-stat-label">Falta</div><div class="goal-stat-val" style="color:var(--red)">R$ 8.200,00</div></div>
+        <div class="goal-stat-item"><div class="goal-stat-label">Guardar/mês</div><div class="goal-stat-val" style="color:var(--blue)">R$ 1.366,67</div></div>
+        <div class="goal-stat-item"><div class="goal-stat-label">Meta</div><div class="goal-stat-val">R$ 10.000,00</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="como-funciona">
+  <div class="section-tag">Como funciona</div>
+  <h2 class="section-title">Em 4 passos você está<br>no controle</h2>
+  <div class="steps-grid">
+    <div class="step-item reveal">
+      <div class="step-num">01</div>
+      <div class="step-title">Crie sua conta</div>
+      <p class="step-desc">Cadastro rápido com e-mail ou Google. Sem formulários chatos, sem dados desnecessários.</p>
+    </div>
+    <div class="step-item reveal" style="transition-delay:.1s">
+      <div class="step-num">02</div>
+      <div class="step-title">Adicione suas contas</div>
+      <p class="step-desc">Cadastre Nubank, Itaú, Inter, Caixa ou qualquer banco. Configure o saldo inicial de cada uma.</p>
+    </div>
+    <div class="step-item reveal" style="transition-delay:.2s">
+      <div class="step-num">03</div>
+      <div class="step-title">Registre tudo</div>
+      <p class="step-desc">Lance receitas e despesas em segundos. Categorize, parcele e marque como pago com um toque.</p>
+    </div>
+    <div class="step-item reveal" style="transition-delay:.3s">
+      <div class="step-num">04</div>
+      <div class="step-title">Evolua com metas</div>
+      <p class="step-desc">Defina objetivos, aceite desafios e veja seu patrimônio crescer mês a mês nos relatórios.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section" id="entrar">
+  <div class="cta-glow"></div>
+  <div class="cta-badge">
+    <div class="dot-live"></div>
+    Grátis para sempre
+  </div>
+  <h2>Comece hoje a cuidar<br>do seu dinheiro</h2>
+  <p>Sem cartão de crédito. Sem mensalidade. Sem desculpa.</p>
+  <a href="https://rajcontrolefinanceiro.lovable.app/login" class="btn-primary" target="_blank" rel="noopener" style="display:inline-flex;font-size:1.05rem;padding:1rem 2.5rem;position:relative;z-index:1;">
+    Criar minha conta agora →
+  </a>
+</div>
+
+<footer>
+  <div class="footer-brand">Raj Controle Financeiro</div>
+  <div class="footer-copy">© 2026 · Sua vida financeira, sob seu controle</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
